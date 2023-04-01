@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../styles/landingpage.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <link rel="stylesheet" href="/path/to/flickity.css" media="screen" />
+    <link rel="stylesheet" href="../styles/footerreview.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+  </head>
+
+  <body>
+    <header>
+      <div id="header1">
+        <img
+          src="imag/Untitled-1.png"
+          alt="logo"
+          onclick="(location.href ='../index.html')"
+        />
+
+        <div class="select">
+          <p id="pinhere">Select Pincode</p>
+          <img
+            src="https://image.flaticon.com/icons/png/128/25/25243.png"
+            alt=""
+            id="useme1234"
+          />
+
+          <div>
+            <input
+              type="text"
+              placeholder="Search for Medicines / Healthcare Products"
+              class="Search"
+              id="search1234"
+              onclick="(location.href='./pages/search.html')"
+            />
+          </div>
+          <a class="search" onclick="searchmed()"
+            ><img
+              src="https://image.flaticon.com/icons/png/128/2089/2089805.png"
+              alt=""
+          /></a>
+        </div>
+        <div class="headerleft">
+          Don't have a prescriptions?
+          <br />
+          Get Started
+          <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div id="header2">
+        <div class="downhead">
+          <span>Order Medicines</span>
+          <span
+            ><a href="4.html" style="color: white">Healthcare Products</a></span
+          >
+          <a href="diagnose.html" style="color: white">Diagnostic Tests</a>
+        </div>
+        <div class="righthead">
+         
+          <img
+            src="https://assets.pharmeasy.in/web-assets/dist/5eb42971.svg"
+            alt=""
+          />
+          <p>Login/Signup</p>
+          <img
+            src="https://assets.pharmeasy.in/web-assets/dist/21b0b5ba.svg"
+            alt=""
+          />
+          <p>Cart</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="large_image">
+      <img
+        src="imag/09b4772af96-DWEBd.jpg.png"
+        alt=""
+      />
+    </div>
+    <div class="sentence">
+      <h1>COVID-19 Recovery Cases-61,59,68,453 *As on 4th November 2022</h1>
+    </div>
+    <div class="short_sen">
+      <h3>Trending Covid Essentials</h3>
+    </div>
+
+    <!-- Flickity HTML init -->
+    <div
+      class="carousel"
+      data-flickity='{ "groupCells": 5 }'
+      style="margin-left: 100px; margin-top: 40px"
+    >
+      <div class="carousel-cell">
+        <img
+          src="https://cdn01.pharmeasy.in/dam/banner/banner/47368a69e23-1FEVERANDFLU.jpg"
+          alt=""
+        />
+      </div>
+      <div class="carousel-cell">
+        <img
+          src="https://cdn01.pharmeasy.in/dam/banner/banner/68b8f101338-2MULTIVITAMINS.jpg"
+          alt=""
+        />
+      </div>
+      <div class="carousel-cell">
+        <img
+          src="https://cdn01.pharmeasy.in/dam/banner/banner/f295667cacd-3IMMUNITYBOOSTERS.jpg"
+          alt=""
+        />
+      </div>
+      <div class="carousel-cell">
+        <img
+          src="https://cdn01.pharmeasy.in/dam/banner/banner/f295667cacd-3IMMUNITYBOOSTERS.jpg"
+          alt=""
+        />
+      </div>
+      <div class="carousel-cell">
+        <img
+          src="https://cdn01.pharmeasy.in/dam/banner/banner/47368a69e23-1FEVERANDFLU.jpg"
+          alt=""
+        />
+      </div>
+      <div class="carousel-cell">
+        <img
+          src="https://cdn01.pharmeasy.in/dam/banner/banner/68b8f101338-2MULTIVITAMINS.jpg"
+          alt=""
+        />
+      </div>
+      <div class="carousel-cell">
+        <img
+          src="https://cdn01.pharmeasy.in/dam/banner/banner/f295667cacd-3IMMUNITYBOOSTERS.jpg"
+          alt=""
+        />
+      </div>
+      <div class="carousel-cell">
+        <img
+          src="https://cdn01.pharmeasy.in/dam/banner/banner/f295667cacd-3IMMUNITYBOOSTERS.jpg"
+          alt=""
+        />
+      </div>
+      <div class="carousel-cell">
+        <img
+          src="https://cdn01.pharmeasy.in/dam/banner/banner/47368a69e23-1FEVERANDFLU.jpg"
+          alt=""
+        />
+      </div>
+      <div class="carousel-cell">
+        <img
+          src="https://cdn01.pharmeasy.in/dam/banner/banner/68b8f101338-2MULTIVITAMINS.jpg"
+          alt=""
+        />
+      </div>
+      <div class="carousel-cell">
+        <img
+          src="https://cdn01.pharmeasy.in/dam/banner/banner/f295667cacd-3IMMUNITYBOOSTERS.jpg"
+          alt=""
+        />
+      </div>
+      <div class="carousel-cell">
+        <img
+          src="https://cdn01.pharmeasy.in/dam/banner/banner/f295667cacd-3IMMUNITYBOOSTERS.jpg"
+          alt=""
+        />
+      </div>
+      <div class="carousel-cell">
+        <img
+          src="https://cdn01.pharmeasy.in/dam/banner/banner/47368a69e23-1FEVERANDFLU.jpg"
+          alt=""
+        />
+      </div>
+      <div class="carousel-cell">
+        <img
+          src="https://cdn01.pharmeasy.in/dam/banner/banner/68b8f101338-2MULTIVITAMINS.jpg"
+          alt=""
+        />
+      </div>
+      <div class="carousel-cell">
+        <img
+          src="https://cdn01.pharmeasy.in/dam/banner/banner/f295667cacd-3IMMUNITYBOOSTERS.jpg"
+          alt=""
+        />
+      </div>
+      <div class="carousel-cell">
+        <img
+          src="https://cdn01.pharmeasy.in/dam/banner/banner/f295667cacd-3IMMUNITYBOOSTERS.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div class="short_sen">
+      <h3>Covid Health Packages</h3>
+      <p>Get safe sample home collection</p>
+    </div>
+
+    <div
+      class="carousel"
+      data-flickity='{ "groupCells": true, "groupCells": 4}'
+      style="margin-left: 120px; margin-top: 40px"
+    >
+      <div class="carousel-cell cells12">
+        <img
+          src="https://cdn01.pharmeasy.in/dam/banner/banner/8c2e1d37356-1IGGIGM.jpg"
+          alt=""
+        />
+      </div>
+      <div class="carousel-cell cells12">
+        <img
+          src="https://cdn01.pharmeasy.in/dam/banner/banner/0667f11f71b-2COVIDSPIKEANTIBODY.jpg"
+          alt=""
+        />
+      </div>
+      <div class="carousel-cell cells12">
+        <img
+          src="https://cdn01.pharmeasy.in/dam/banner/banner/701516a20d8-3ADVANCEFULLBODYCHECKUP.jpg"
+          alt=""
+        />
+      </div>
+      <div class="carousel-cell cells12">
+        <img
+          src="https://cdn01.pharmeasy.in/dam/banner/banner/22a92c1109e-4COVIDANTIBODYTEST.jpg"
+          alt=""
+        />
+      </div>
+      <div class="carousel-cell cells12">
+        <img
+          src="https://cdn01.pharmeasy.in/dam/banner/banner/8c2e1d37356-1IGGIGM.jpg"
+          alt=""
+        />
+      </div>
+      <div class="carousel-cell cells12">
+        <img
+          src="https://cdn01.pharmeasy.in/dam/banner/banner/0667f11f71b-2COVIDSPIKEANTIBODY.jpg"
+          alt=""
+        />
+      </div>
+      <div class="carousel-cell cells12">
+        <img
+          src="https://cdn01.pharmeasy.in/dam/banner/banner/701516a20d8-3ADVANCEFULLBODYCHECKUP.jpg"
+          alt=""
+        />
+      </div>
+      <div class="carousel-cell cells12">
+        <img
+          src="https://cdn01.pharmeasy.in/dam/banner/banner/22a92c1109e-4COVIDANTIBODYTEST.jpg"
+          alt=""
+        />
+      </div>
+      <div class="carousel-cell cells12">
+        <img
+          src="https://cdn01.pharmeasy.in/dam/banner/banner/8c2e1d37356-1IGGIGM.jpg"
+          alt=""
+        />
+      </div>
+      <div class="carousel-cell cells12">
+        <img
+          src="https://cdn01.pharmeasy.in/dam/banner/banner/0667f11f71b-2COVIDSPIKEANTIBODY.jpg"
+          alt=""
+        />
+      </div>
+      <div class="carousel-cell cells12">
+        <img
+          src="https://cdn01.pharmeasy.in/dam/banner/banner/701516a20d8-3ADVANCEFULLBODYCHECKUP.jpg"
+          alt=""
+        />
+      </div>
+      <div class="carousel-cell cells12">
+        <img
+          src="https://cdn01.pharmeasy.in/dam/banner/banner/22a92c1109e-4COVIDANTIBODYTEST.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div class="short_sen">
+      <h3>Resource Information</h3>
+    </div>
+    <div class="third_image_slide">
+      <img
+        src="https://cdn01.pharmeasy.in/dam/banner/banner/63352405a60-2OXYGENANDICU.jpg"
+        alt=""
+      />
+      <img
+        src="https://cdn01.pharmeasy.in/dam/banner/banner/220fa6ffb44-3DONATE.jpg"
+        alt=""
+      />
+      <img
+        src="https://cdn01.pharmeasy.in/dam/banner/banner/789ec13108f-4HELPLINE.jpg"
+        alt=""
+      />
+    </div>
+
+    <div class="short_sen">
+      <h3>Covid Awareness</h3>
+    </div>
+
+    <div class="forth_image_slide">
+      <img
+        src="https://cdn01.pharmeasy.in/dam/banner/banner/dceb47e93e4-CovidSafety.jpg"
+        alt=""
+      />
+      <img
+        src="https://cdn01.pharmeasy.in/dam/banner/banner/dfb12d6a565-CovidCare.jpg"
+        alt=""
+      />
+      <img
+        src="https://cdn01.pharmeasy.in/dam/banner/banner/9f83db7b63d-PostCovidCare.jpg"
+        alt=""
+      />
+      <img
+        src="https://cdn01.pharmeasy.in/dam/banner/banner/45b36ae9848-CovidV.jpg"
+        alt=""
+      />
+    </div>
+
+    <div class="fifth_image">
+      <img
+        src="https://cdn01.pharmeasy.in/dam/banner/banner/46ff7f6d80c-DWEBALTERNATEMEDICINES.jpg"
+        alt=""
+      />
+    </div>
+    
+
+  
+    <div id="bot3">
+      <div id="b3first">
+        <div id="feat">
+          <div>
+            <h4>Company</h4>
+            <p>Careers</p>
+            <p>Blogs</p>
+            <p>Partner with PharmEasy</p>
+            <h4>Our Services</h4>
+            <p>Order Medicine</p>
+            <p>Healthcare Products</p>
+            <p>Diagnostic Tests</p>
+          </div>
+          <div>
+            <h4>Featured Categories</h4>
+            <p>Covid Essentials</p>
+            <p>Devices</p>
+            <p>Nutriyion and Fitness Suppliments</p>
+            <p>Personal Care</p>
+            <p>Ayurvedic Care</p>
+            <p>Baby and Mom care</p>
+            <p>Skin Care</p>
+            <p>Diabetic Care</p>
+            
+            <p>Short term Ailments</p>
+            <p>Lifestyle Ailments</p>
+            <p>Home Care</p>
+            <p>Women Care</p>
+            <p>Health Food and Drinks</p>
+            <p>Ortho Care</p>
+          </div>
+          <div>
+            <h4>Need Help</h4>
+            <p>Browse All Medicines</p>
+            <p>Browse All Molecules</p>
+            <p>FAQs</p>
+            <h4>Policy Info</h4>
+            <p>Editorial Policy</p>
+            <p>Privacy Policy</p>
+            <p>Vulnerability Disclosure Policy</p>
+            <p>Terms and condition</p>
+            <p>Customer Support Policy</p>
+            <p>Return Policy</p>
+          </div>
+        </div>
+        <div id="social">
+          <h4>FOLLOW US</h4>
+          <img
+            src="imag/Instagram.svg.png"
+            alt="insta"
+          /><img
+            src="imag/Facebook-f_Logo-Blue-Logo.wine.svg.png"
+            alt="fb"
+          /><img
+            src="imag/YouTube_dark_icon_(2017).svg.png"
+            alt="YT"
+          /><img
+            src="imag/twitter-icon.svg.png"
+            alt="twit"
+          />
+        </div>
+      </div>
+      <div id="b3sec">
+       
+        <div id="copy">© 2022 KashmirMeds. All Rights Reserved</div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="/path/to/flickity.pkgd.min.js"></script>
+  </body>
+</html>

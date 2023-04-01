@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      KashmirMeds: Online Pharmacy & Medical Store 
+    </title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+      integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <link rel="stylesheet" href="/path/to/flickity.css" media="screen" />
+    <link rel="stylesheet" href="./styles/footerreview.css" />
+
+    <link rel="stylesheet" href="./styles/css1.css" />
+
+    <link rel="stylesheet" href="./styles/landingpage.css" />
+    <link rel="stylesheet" href="./styles/abovefooter.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+  </head>
+
+  <body>
+    <header>
+      <div id="header1">
+        <img
+          src="imag/Untitled-1.png"
+          alt="logo"
+          onclick="(location.href ='/index.html')"
+        />
+
+        <div class="select">
+          <p id="pinhere">Select Pincode</p>
+          <img
+            src="https://image.flaticon.com/icons/png/128/25/25243.png"
+            alt=""
+            id="useme1234"
+          />
+
+          <div>
+            <input
+              type="text"
+              placeholder="Search for Medicines / Healthcare Products"
+              class="Search"
+              id="search1234"
+              onclick="(location.href='./pages/search.html')"
+            />
+          </div>
+          <a class="search" onclick="searchmed()"
+            ><img
+              src="https://image.flaticon.com/icons/png/128/2089/2089805.png"
+              alt=""
+          /></a>
+        </div>
+        <div class="headerleft" id="useme12">
+          Don't have a prescriptions?
+          <br />
+          Get one Now!
+          <img
+            src="https://image.flaticon.com/icons/png/128/44/44571.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div id="header2">
+        <div class="downhead">
+          <span
+            ><a href="./pages/view_cart.html" style="color: white"
+              >Order Medicines</a
+            ></span
+          >
+          <span
+            ><a href="./pages/hcareProduct.html" style="color: white"
+              >Healthcare Products</a
+            ></span
+          >
+          <a href="./pages/diagnose.html" style="color: white"
+            >Diagnostic Tests</a
+          >
+        </div>
+        <div class="righthead" id="rit">
+
+          <img src="https://assets.pharmeasy.in/web-assets/dist/5eb42971.svg" />
+          <p id="makemeuser">
+            <a href="#" style="color: white" id="useme">Login/Signup</a>
+          </p>
+          <p id="useruser">User</p>
+
+          <img
+            src="https://assets.pharmeasy.in/web-assets/dist/21b0b5ba.svg"
+            alt=""
+            onclick="(location.href='./pages/cart.html')"
+          />
+          <p><a href="./pages/cart.html" style="color: white">Cart</a></p>
+        </div>
+      </div>
+    </header>
+    <div id="cont"></div>
+    <script>
+      let img = [
+        "https://cms-contents.pharmeasy.in/banner/fcf06e6cf90-STAYHOMEDWEB.jpg?dim=1440x0&dpr=1.25&q=100",
+        "https://cms-contents.pharmeasy.in/banner/fef1ef3c06a-DWEBCOVID.jpg?dim=1440x0&dpr=1.25&q=100",
+      ]
+      var i = -1
+      setInterval(function () {
+        i++
+        if (i == img.length) {
+          i = 0
+        }
+        let cont = document.getElementById("cont")
+        cont.innerHTML = `<img src=${img[i]} alt="img${i}">`
+      }, 2000)
+    </script>
+
+    <div class="arw">
+      <div class="left_arw">
+        <img
+          src="https://image.flaticon.com/icons/png/128/566/566011.png"
+          alt=""
+        />
+      </div>
+     
+    </div>
+
+    <div id="svgs">
+      <div id="insvg1" class="fon" onclick="(location.href ='pages/view_cart.html')">
+        <h3>Order Medicines</h3>
+        <button>Order Now</button>
+      </div>
+      <div
+        id="insvg2"
+        class="fon"
+        onclick="(location.href ='pages/hcareProduct.html')"
+      >
+        <h3>HealthCare products</h3>
+        <button>Order Now</button>
+      </div>
+      <div id="insvg3" class="fon" onclick="(location.href ='pages/diagnose.html')">
+        <h3>Lab Tests</h3>
+        <button>Order Now</button>
+      </div>
+    </div>
+
+
+    <div id="imagesbar">
+      <img
+        src="https://assets.pharmeasy.in/web-assets/dist/0ad2d80a.png"
+        alt=""
+      />
+      <img
+        src="https://assets.pharmeasy.in/web-assets/dist/6e630ccf.png"
+        alt=""
+      />
+      <img
+        src="https://assets.pharmeasy.in/web-assets/dist/c9bd8df2.png"
+        alt=""
+      />
+      <img
+        src="https://assets.pharmeasy.in/web-assets/dist/748e0da8.png"
+        alt=""
+      />
+      <img
+        src="https://assets.pharmeasy.in/web-assets/dist/aada0d0d.png"
+        alt=""
+      />
+      <img
+        src="https://assets.pharmeasy.in/web-assets/dist/091811c4.png"
+        alt=""
+      />
+    </div>
+  
+
+
+
+    <div class="review">
+     
+      <div class="catego">
+        <p>Top Categories</p>
+        <p>View More</p>
+      </div>
+      <div class="flexing">
+        <div class="cssisi12">
+          <img
+            src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/05345cd0e54-Devices.jpg"
+            alt=""
+          />
+        </div>
+        <div class="cssisi12">
+          <img
+            src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/eb45762cff0-Nutrition-drinks-min.jpg"
+            alt=""
+          />
+        </div>
+        <div class="cssisi12">
+          <img
+            src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/12223230e1a-Ayurvedic-care.jpg"
+            alt=""
+          />
+        </div>
+        <div class="cssisi12">
+          <img
+            src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/2ddc1748b99-Baby-Mom-care.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div class="main_delive">
+        <div class="deliv">
+          <img
+            src="https://assets.pharmeasy.in/web-assets/dist/4d2f7c48.svg"
+            alt=""
+          />
+          <h1>500+ </h1>
+          <p>Families served</p>
+        </div>
+        <div class="deliv">
+          <img
+            src="https://assets.pharmeasy.in/web-assets/dist/92c372bb.svg"
+            alt=""
+          />
+          <h1>1000+</h1>
+          <p>Orders Delivered</p>
+        </div>
+        <div class="deliv">
+          <img
+            src="https://assets.pharmeasy.in/web-assets/dist/f2d557d3.svg"
+            alt=""
+          />
+          <h1>50+</h1>
+          <p>Authentic Stores </p>
+        </div>
+        <div class="deliv">
+          <img
+            src="https://assets.pharmeasy.in/web-assets/dist/773ae9c5.svg"
+            alt=""
+          />
+          <h1>5000+</h1>
+          <p>Medicines Sold</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="bottom">
+      <div class="simplify">
+        <h1>Simplifying Healthcare,Impacting Lives</h1>
+        <h2>Download the App for free</h2>
+        <img
+          src="https://assets.pharmeasy.in/web-assets/dist/4e4f1cab.png"
+          alt="logo2"
+        />
+        <img
+          src="https://assets.pharmeasy.in/web-assets/dist/83095c03.png"
+          alt="logo3"
+        />
+      </div>
+      <div class="right">
+        <img 
+        src="imag/f67d7f64.jpg">
+       
+      </div>
+    </div>
+    <!-- Footer part starts here -->
+
+    <hr />
+    <div id="bot1">
+      <div>
+        <img
+          src="https://assets.pharmeasy.in/web-assets/dist/9ac2da37.svg?dim=0x72&dpr=1.25&q=100"
+        />
+        <h4>1 Lakh+ Products</h4>
+        <p>
+          We maintain strict quality controls on all our partner retailers, so
+          that you always get standard quality products.
+        </p>
+      </div>
+      <div>
+        <img
+          src="https://assets.pharmeasy.in/web-assets/dist/2f258fe0.svg?dim=0x72&dpr=1.25&q=100"
+        />
+        <h4>Secure Payment</h4>
+        <p>100% secure and trusted payment protection</p>
+      </div>
+      <div>
+        <img
+          src="https://assets.pharmeasy.in/web-assets/dist/256fe591.svg?dim=0x72&dpr=1.25&q=100"
+        />
+        <h4>Easy Return</h4>
+        <p>
+          We have a new and dynamic return window policy for medicines and
+          healthcare items. Refer FAQs section for more details.
+        </p>
+      </div>
+    </div>
+    <hr />
+
+
+    <div id="bot3">
+      <div id="b3first">
+        <div id="feat">
+          <div>
+            <h4>Company</h4>
+            <p>Careers</p>
+            <p>Blogs</p>
+            <p>Partner with KashmirMeds</p>
+            <h4>Our Services</h4>
+            <p>Order Medicine</p>
+            <p>Healthcare Products</p>
+            <p>Diagnostic Tests</p>
+          </div>
+          <div>
+            <h4>Featured Categories</h4>
+            <p>Covid Essentials</p>
+            <p>Devices</p>
+            <p>Nutrision and Fitness Suppliments</p>
+            <p>Personal Care</p>
+            <p>Ayurvedic Care</p>
+            <p>Baby and Mom care</p>
+            <p>Skin Care</p>
+            <p>Diabetic Care</p>
+            <p>Sexual Wellness</p>
+            <p>Short term Ailments</p>
+            <p>Lifestyle Ailments</p>
+            <p>Home Care</p>
+            <p>Women Care</p>
+            <p>Health Food and Drinks</p>
+            <p>Ortho Care</p>
+          </div>
+          <div>
+            <h4>Need Help</h4>
+            <p>Browse All Medicines</p>
+            <p>Browse All Molecules</p>
+            <p>FAQs</p>
+            <h4>Policy Info</h4>
+            <p>Editorial Policy</p>
+            <p>Privacy Policy</p>
+            <p>Vulnerability Disclosure Policy</p>
+            <p>Terms and condition</p>
+            <p>Customer Support Policy</p>
+            <p>Return Policy</p>
+          </div>
+        </div>
+        <div id="social">
+          <h4>FOLLOW US</h4>
+          <img
+            src="imag/Instagram.svg.png"
+            alt="insta"
+          /><img
+            src="imag/Facebook-f_Logo-Blue-Logo.wine.svg.png"
+            alt="fb"
+          /><img
+            src="imag/YouTube_dark_icon_(2017).svg.png"
+            alt="YT"
+          /><img
+            src="imag/twitter-icon.svg.png"
+            alt="twit"
+          />
+        </div>
+      </div>
+      <div id="b3sec">
+        <div id="copy">© 2022 KashmirMeds . All Rights Reserved</div>
+      </div>
+    </div>
+    <!-- popup's -->
+    <!-- login popup -->
+    <div class="popup">
+      <div class="cross" onclick="x()">
+        <p>X</p>
+      </div>
+      <div class="pop_content">
+        <header class="lohead">
+          <div class="head">
+            <img
+              src="imag/Untitled-1.png"
+              alt="logo"
+            />
+          </div>
+          <div class="headright">
+            <img
+              src="https://assets.pharmeasy.in/web-assets/dist/1fe1322a.svg"
+              alt="logo2"
+            />
+          </div>
+        </header>
+        <div class="login">
+          <p>Quick Login /Register</p>
+        </div>
+        <div id="entry">
+          <input type="text" placeholder="Enter your Phone number" id="num" />
+          <button class="go" onclick="go()">Continue</button>
+        </div>
+
+        <div class="foot">
+          By clicking continue, you agree with our
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+    <!-- prescriptions -->
+
+    <div class="refer">
+      <div class="ref_con">
+        <div class="btn_ref" onclick="x1()">
+          <p>X</p>
+        </div>
+        <div class="pre_1">
+          <div class="first_pre">
+            <h2>Don't have a prescriptions?</h2>
+            <h4>Don't worry!</h4>
+          </div>
+          <div class="img_pre">
+            <img
+              src="https://assets.pharmeasy.in/web-assets/dist/6e51a3f7.svg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="pre_2">
+          <p>Follow these steps:</p>
+          <p>1.Add medicines to your cart</p>
+          <p>2.Select FREE Doctor consultation at checkout</p>
+          <p>---------------------OR---------------------</p>
+          <p>Call us at +91 91494 53735 and directly place your order</p>
+        </div>
+      </div>
+    </div>
+    <!-- pincode -->
+    <div class="pin_pop">
+      <div class="pin_cont">
+        <div class="cross121" onclick="x2()">
+          <p>X</p>
+        </div>
+        <div class="pin_loc"><h2>Choose your Location</h2></div>
+        <div class="pin_inp">
+          <input type="text" placeholder="Enter PIN Code" id="pinc" />
+          <button onclick="cpin()">Check</button>
+        </div>
+        <div class="pin_box1" id="address90">
+          <img
+            src="https://assets.pharmeasy.in/web-assets/dist/ff969f07.svg"
+            alt=""
+          />
+          <p>Add New Address</p>
+        </div>
+        <div class="pin_box1">
+          <img
+            src="https://assets.pharmeasy.in/web-assets/dist/ff969f07.svg"
+            alt=""
+          />
+          <p>Login to View Address</p>
+        </div>
+        <div class="pin_box2">
+          <img
+            src="https://assets.pharmeasy.in/web-assets/dist/90ee736b.svg"
+            alt=""
+          />
+          <p>Serving more than 1,000 towns and cities in india</p>
+        </div>
+        <div class="pin_box3">
+          <img
+            src="https://assets.pharmeasy.in/web-assets/dist/0c22e009.svg?dim=0x32&dpr=1.25&q=100"
+            alt=""
+          />
+          <p>Over 30,00,000 orders safely delivered</p>
+        </div>
+      </div>
+    </div>
+    <!-- search pop -->
+    <div class="srch_pop">
+      <div class="sch_drop" onclick="x3()">
+        <div class="sch_p1">
+          <p>Frequently Seached items</p>
+        </div>
+        <div class="srh_ps">
+          <p>Ecosprin 75mg Strip of 14 Tablets</p>
+          <p>Shelcal 500mg Strip of 14 Tablets</p>
+          <p>Ecosprin AV 75mg Strip of 15 Capsules</p>
+          <p>Evion 400mg Strip of 10 Capsules</p>
+          <p>Pan 40mg 15's Tab</p>
+          <p>Shelcal 500mg Strip of 14 Tablets</p>
+          <p>Ecosprin AV 75mg Strip of 15 Capsules</p>
+          <p>Evion 400mg Strip of 10 Capsules</p>
+          <p>Pan 40mg 15's Tab</p>
+          <p>New Celin 500mg Tablets 25's</p>
+        </div>
+      </div>
+    </div>
+    <!-- user dropdown -->
+    <div id="close_user">
+      <div class="user_dropout"></div>
+      <div class="form_user">
+        <div class="input_user">
+          <p onclick="(location.href ='./pages/signup.html')">My Orders</p>
+          <p onclick="(location.href ='./pages/signup.html')">My Refills</p>
+          <p onclick="(location.href ='./pages/signup.html')">Medical Records</p>
+          <p onclick="(location.href ='./pages/signup.html')">My Profile</p>
+          <p onclick="(location.href ='./pages/signup.html')">Wallet</p>
+          <p onclick="(location.href ='./pages/signup.html')">Refer & Earn</p>
+          <p onclick="(location.href ='./pages/signup.html')">Notification</p>
+          <p onclick="logout()">Log Out</p>
+        </div>
+      </div>
+    </div>
+    <!-- address -->
+    <div class="pin_pop90">
+      <div class="pin_cont90">
+        <div class="cross12190" onclick="x90()">
+          <p>X</p>
+        </div>
+        <div class="adde_main1">
+          <div class="adde_cont1">
+            <p>Add New Address</p>
+          </div>
+          <div class="adde_cont2">
+            <img
+              src="https://assets.pharmeasy.in/web-assets/dist/0c22e009.svg?dim=0x32&dpr=1.25&q=100"
+              alt=""
+            />
+            <p>
+              Items will be safely packed & Sanitized. Pay online for
+              contactless delivery
+            </p>
+          </div>
+          <form>
+            <div class="form_addre">
+              <p>Bill To*</p>
+              <input type="text" name="Bill no" />
+              <p>The bill will be prepared against this name</p>
+            </div>
+            <div class="form_addre">
+              <p>Mobile Number*</p>
+              <input type="text" name="Mobile Number" disabled />
+              <p>For all delivery related communication</p>
+            </div>
+            <div class="form_addre">
+              <p>Building Name and Flat Number*</p>
+              <input type="text" name="Flat number" />
+            </div>
+            <div class="form_addre">
+              <p>Street Name*</p>
+              <input type="text" name="Street Number" />
+            </div>
+            <div class="form_addre">
+              <p>Pincode*</p>
+              <input type="text" name="Pincode" ondblclick="saveadd()" />
+            </div>
+            <div>
+              <p>Address Type*</p>
+              <div class="span_addre1">
+                <span>
+                  <input type="radio" name="same" />
+                </span>
+                <span>
+                  <p>Home</p>
+                </span>
+                <span>
+                  <input type="radio" name="same" />
+                </span>
+                <span>
+                  <p>Work</p>
+                </span>
+                <span>
+                  <input type="radio" name="same" />
+                </span>
+                <span>
+                  <p>Others</p>
+                </span>
+              </div>
+            </div>
+            <div class="save_addre1">
+              <button>Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- script adresss -->
+    <script>
+      document
+        .getElementById("address90")
+        .addEventListener("click", function () {
+          document.querySelector(".pin_pop90").style.display = "block"
+          let num = document.getElementsByName("Mobile Number")[0]
+
+          let arr = JSON.parse(localStorage.getItem("session"))
+          num.placeholder = arr[0].num
+        })
+      function x90() {
+        document.querySelector(".pin_pop90").style.display = "none"
+      }
+    </script>
+    <script>
+      function cpin() {
+        let pin = document.getElementById("pinc").value
+        //console.log(pin.length);
+        if (pin.length < 6 || pin.length > 6) {
+          alert("Enter a vaalid Pincode")
+          return
+        }
+        let tobe = pins[pin]
+        console.log(tobe)
+        let pl = document.getElementById("pinhere")
+        if (tobe == undefined) {
+          alert("Currently not deliverable Here, But we'll be there soon!!!")
+          return
+        } else {
+          let pinr = JSON.parse(localStorage.getItem("session"))
+          pinr[0].pin = tobe
+          pl.textContent = tobe
+        }
+      }
+    </script>
+
+    <!-- script starts -->
+    <script>
+      let logg = document.getElementById("useruser")
+      let logg1 = 0
+      logg.addEventListener("mouseover", cl)
+      function cl() {
+        logg1++
+        if (logg1 % 2 == 0) {
+          let closer = (document.getElementById("close_user").style.display =
+            "block")
+        } else {
+          let closer = (document.getElementById("close_user").style.display =
+            "none")
+        }
+      }
+    </script>
+
+    <!-- login script -->
+    <script>
+      document
+        .getElementById("makemeuser")
+        .addEventListener("click", function () {
+          document.querySelector(".popup").style.display = "block"
+        })
+
+      function x() {
+        document.querySelector(".popup").style.display = "none"
+      }
+    </script>
+    <!-- prescription script -->
+    <script>
+      document.getElementById("useme12").addEventListener("click", function () {
+        document.querySelector(".refer").style.display = "block"
+      })
+
+      function x1() {
+        document.querySelector(".refer").style.display = "none"
+      }
+    </script>
+    <!-- pincode -->
+    <script>
+      document
+        .getElementById("useme1234")
+        .addEventListener("click", function () {
+          document.querySelector(".pin_pop").style.display = "block"
+        })
+      function x2() {
+        document.querySelector(".pin_pop").style.display = "none"
+      }
+    </script>
+    <!-- search -->
+    <script>
+      document
+        .getElementById("search1234")
+        .addEventListener("click", function () {
+          document.querySelector(".srch_pop").style.display = "block"
+        })
+      function x3() {
+        document.querySelector(".srch_pop").style.display = "none"
+      }
+    </script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="/path/to/flickity.pkgd.min.js"></script>
+  </body>
+</html>
+<script src="./src/pincode.js"></script>
+<script src="./src/login.js"></script>
+<script src="./src/signup.js"></script>
+<script src="./src/search.js"></script>
